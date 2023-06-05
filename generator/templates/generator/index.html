@@ -1,5 +1,21 @@
 {% extends 'generator/base.html' %}
 
 {% block context %}
-<p>index content</p>
+<h2>Создайте себе пароль</h2><br><br>
+<form action="password">
+    <select name="length" id="">
+        <option value="5">5</option>
+        <option value="25">25</option>
+
+    </select> Длина пароля
+    <br><br>
+    <input type="checkbox" name="uppercase"> Заглавные буквы <br><br>
+    <input type="checkbox" name="uppercase"> Цифры <br><br>
+    <input type="checkbox" name="uppercase"> Спецсимволы <br><br>
+
+
+    <input type="submit" value="Сгенерировать пароль">
+
+
+</form>
 {% endblock %}

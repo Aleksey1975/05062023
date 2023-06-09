@@ -1,0 +1,10 @@
+{% extends 'generator/base.html' %}
+
+{% block content %}
+{% for article in articles %}
+<hr>
+<h3>{{article.date_creation}}</h3>
+<a href="{% url 'blog:detail' article.id %}"><h2>{{article.title}}</h2></a>
+<p>{{ article.content }}</p>
+{% endfor %}
+{% endblock %}

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'generator.apps.GeneratorConfig',
     'portfolio.apps.PortfolioConfig',
+    'blog.apps.BlogConfig',
 
 ]
 

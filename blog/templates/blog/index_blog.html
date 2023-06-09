@@ -1,10 +1,12 @@
 {% extends 'generator/base.html' %}
 
 {% block content %}
+<p>Количество постов: {{ articles.count }}</p>
+<p>Nick has written {{ articles.count }} blog{{ articles.count|pluralize}}</p>
 {% for article in articles %}
 <hr>
-<h3>{{article.date_creation}}</h3>
+<h3>{{article.date_creation|date:'M d Y'|upper}}</h3>
 <a href="{% url 'blog:detail' article.id %}"><h2>{{article.title}}</h2></a>
-<p>{{ article.content }}</p>
+<p>{{ article.content|safe|truncatechars:100 }}</p>
 {% endfor %}
 {% endblock %}

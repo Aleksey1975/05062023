@@ -1,5 +1,7 @@
 {% extends 'generator/base.html' %}
 
 {% block content %}
-{{ blog.title }}
+<h2>{{blog.date_creation|date:'F jS Y'}}</h2>
+<h3>{{ blog.title }}</h3>
+<p>{{ blog.content|striptags }}</p>
 {% endblock %}

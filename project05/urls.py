@@ -25,6 +25,8 @@ urlpatterns = [
     path('', include('generator.urls')),
     path('portfolio/', include('portfolio.urls')),
     path('blog/', include('blog.urls')),
+    path('blog2/', include('blog2.urls')),
+    path('todo/', include('todo.urls')),
 
 
 ]

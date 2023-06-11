@@ -5,7 +5,8 @@ from .views import *
 
 urlpatterns = [
 
-    path('signup/', signupuser, name='signupuser'),
+    path('signup/', signupuser, name='todo'),
+    path('current/', currenttodos, name='currenttodos'),
 
 
     ]
